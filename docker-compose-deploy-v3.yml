@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  nginx:
+    image: mbentley/nginx-healthcheck:latest
+    networks:
+      - bignet
+    deploy:
+      placement:
+        constraints:
+          - "node.hostname==test04"
+      mode: replicated
+      replicas: 300
+
+networks:
+  bignet:
+    driver: overlay
+    ipam:
+      driver: default
+      config:
+        - subnet: "10.0.4.0/22"
