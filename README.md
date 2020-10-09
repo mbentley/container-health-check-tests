@@ -22,6 +22,6 @@ Load average: `7.28, 14.88, 30.85`
 
 Deployed with `docker-compose-deploy-v3.yml`
 
-Load average: `88.65 53.85 35.30`
+Load average: `60.16, 52.17, 29.01`
 
 ![swarm_docker_hc](./img/swarm_docker_hc.png)
