@@ -1,5 +1,7 @@
 # k8s-health
 
+Tests done on an 8 core CPU; workloads deployed to 1 specific node.
+
 ## k8s no health check / no liveness probe
 
 Deployed with `healthprobe_no_probe.yml`
