@@ -1,5 +1,13 @@
 # k8s-health
 
+## k8s no health check / no liveness probe
+
+Deployed with `healthprobe_no_probe.yml`
+
+Load average: `7.17, 34.59, 37.84`
+
+![k8s_no_probe](./img/k8s_no_probe.png)
+
 ## k8s livenessprobe (deployed via k8s)
 
 Deployed with `healthprobe_livenessprobe.yml`
