@@ -1,0 +1,51 @@
+{
+  "id": "/test",
+  "cmd": null,
+  "cpus": 0.01,
+  "mem": 128,
+  "disk": 0,
+  "instances": 300,
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "forcePullImage": false,
+      "image": "nginx:alpine",
+      "parameters": [],
+      "privileged": false
+    },
+    "volumes": [],
+    "portMappings": [
+      {
+        "containerPort": 80,
+        "hostPort": 0,
+        "labels": {},
+        "name": "nginx-80",
+        "protocol": "tcp",
+        "servicePort": 10001
+      }
+    ]
+  },
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 10,
+      "ignoreHttp1xx": false,
+      "intervalSeconds": 10,
+      "maxConsecutiveFailures": 3,
+      "path": "/",
+      "portIndex": 0,
+      "protocol": "HTTP",
+      "ipProtocol": "IPv4",
+      "timeoutSeconds": 5,
+      "delaySeconds": 15
+    }
+  ],
+  "networks": [
+    {
+      "mode": "container/bridge"
+    }
+  ],
+  "portDefinitions": []
+}
