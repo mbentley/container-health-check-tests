@@ -12,7 +12,7 @@
     "type": "DOCKER",
     "docker": {
       "forcePullImage": false,
-      "image": "nginx:alpine",
+      "image": "mbentley/nginx:latest",
       "parameters": [],
       "privileged": false
     },
